@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: '#F5F4F0';
+  color: #111111;
+  font-family: Calibri, sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  color: #111111;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #4B4B4B;
+}
+
+::selection {
+  background: #111111;
+  color: white;
+}
+.project-card:hover .project-image img {
+  transform: scale(1.03);
+  filter: brightness(1.02);
+}
