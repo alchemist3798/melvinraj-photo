@@ -104,16 +104,17 @@ const rolls: Roll[] =
       >
 
         <div
-          style={{
-            display: 'grid',
+  style={{
+    display: 'grid',
 
-           gridTemplateColumns:
-  'repeat(3, minmax(0,1fr))',
+    gridTemplateColumns:
+      'repeat(auto-fit, minmax(320px, 1fr))',
 
-            columnGap: '32px',
-rowGap: '72px',
-          }}
-        >
+    gap: '48px 28px',
+
+    width: '100%',
+  }}
+>
 
           {rolls.map((roll: Roll) => (
 
@@ -143,7 +144,9 @@ rowGap: '72px',
                     style={{
                       width: '100%',
 
-                      height: '320px',
+                      aspectRatio: '4 / 5',
+
+height: 'auto',
 
                       objectFit: 'cover',
 
@@ -155,7 +158,7 @@ rowGap: '72px',
 
                 <h2
                   style={{
-                    fontSize: '1.7rem',
+                    fontSize: 'clamp(1.3rem, 2vw, 1.7rem)',
                     lineHeight: 1.05,
 
                     marginBottom: '12px',

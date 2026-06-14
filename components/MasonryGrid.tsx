@@ -109,11 +109,13 @@ useEffect(() => {
     display: 'grid',
 
     gridTemplateColumns:
-      'repeat(3, minmax(0, 1fr))',
+      'repeat(auto-fit, minmax(320px, 1fr))',
 
-    gap: '18px',
+    gap: '20px',
 
     alignItems: 'start',
+
+    width: '100%',
   }}
 >
 
@@ -240,15 +242,24 @@ useEffect(() => {
         }}
 
         style={{
-          backgroundImage:
-  'linear-gradient(to bottom right, rgba(255,255,255,0.95), rgba(240,240,240,0.92))',
-          maxWidth: '680px',
-          width: '100%',
-          display: 'flex',
-flexDirection: 'column',
-          overflow: 'hidden',
-          boxShadow: '0 40px 120px rgba(0,0,0,0.35)',
-        }}
+  backgroundImage:
+    'linear-gradient(to bottom right, rgba(255,255,255,0.95), rgba(240,240,240,0.92))',
+
+  maxWidth: '680px',
+
+  width: '100%',
+
+  maxHeight: '90vh',
+
+  overflowY: 'auto',
+
+  display: 'flex',
+
+  flexDirection: 'column',
+
+  boxShadow:
+    '0 40px 120px rgba(0,0,0,0.35)',
+}}
 
         onClick={(e) => e.stopPropagation()}
       >
@@ -302,7 +313,7 @@ flexDirection: 'column',
 
             <h2
               style={{
-                fontSize: '52px',
+                fontSize: 'clamp(2rem, 5vw, 52px)',
                 color: '#111111',
                 marginBottom: '24px',
               }}
@@ -344,7 +355,7 @@ onMouseLeave={(e) => {
   }}
   style={{
     position: 'absolute',
-    right: '40px',
+    right: '16px',
     color: 'white',
     fontSize: '32px',
     opacity: 0.45,
@@ -368,7 +379,8 @@ onMouseLeave={(e) => {
   <div
     style={{
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
+      gridTemplateColumns:
+  'repeat(auto-fit, minmax(160px, 1fr))',
       gap: '12px',
       marginBottom: '40px',
     }}
